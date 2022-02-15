@@ -7,11 +7,11 @@ public class Car implements ICar {
 
     private String carModel;
     private String carClass;
-    private String weight;
+    private int weight;
     private Driver driver;
     private Engine engine;
 
-    public Car(String carModel, String carClass, String weight, Driver driver, Engine engine) {
+    public Car(String carModel, String carClass, int weight, Driver driver, Engine engine) {
         this.carModel = carModel;
         this.carClass = carClass;
         this.weight = weight;
@@ -47,7 +47,7 @@ public class Car implements ICar {
         return carClass;
     }
 
-    public String getWeight() {
+    public int getWeight() {
         return weight;
     }
 

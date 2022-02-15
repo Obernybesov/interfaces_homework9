@@ -5,9 +5,9 @@ import com.company.professions.Driver;
 
 public class Lorry extends Car{
 
-    private String loadCapacity;
+    private int loadCapacity;
 
-    public Lorry(String carModel, String carClass, String weight, Driver driver, Engine engine, String loadCapacity) {
+    public Lorry(String carModel, String carClass, int weight, Driver driver, Engine engine, int loadCapacity) {
         super(carModel, carClass, weight, driver, engine);
         this.loadCapacity = loadCapacity;
     }
@@ -19,7 +19,7 @@ public class Lorry extends Car{
                 + ", Weight: " + getWeight()
                 + ", Driver: " + getDriver()
                 + ", Engine: " + getEngine()
-                + ", Load capacity: " + loadCapacity;
+                + ", Load capacity: " + loadCapacity + " kg";
     }
 
 }
