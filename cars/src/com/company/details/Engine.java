@@ -1,21 +1,30 @@
 package com.company.details;
 
-public enum Engine implements IEngine{
-    INLINE("Inline engine"),
-    V_SHAPED("V-shaped engine"),
-    VR_SHAPED("VR-shaped engine"),
-    BOXER("Boxer engine"),
-    W_SHAPED("W-shaped engine");
+public class Engine implements IEngine{
+
+    private int enginePower;
+    private String enginePerformance;
 
 
-    private String engineType;
+    public Engine(int enginePower, String enginePerformance) {
+        this.enginePower = enginePower;
+        this.enginePerformance = enginePerformance;
+    }
 
-    Engine(String engineType) {
-        this.engineType = engineType;
+
+    public int getEnginePower() {
+        return enginePower;
     }
 
     @Override
     public String toString() {
-        return engineType;
+        return enginePower + " h.p. " + enginePerformance;
+    }
+
+
+    @Override
+    public double quarterMileET(int weight, int enginePower) {
+        this.enginePower = enginePower;
+        return 5.825 * Math.pow(weight/enginePower, 0.3333333);
     }
 }
