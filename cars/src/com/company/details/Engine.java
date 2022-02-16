@@ -24,7 +24,6 @@ public class Engine implements IEngine{
 
     @Override
     public double quarterMileET(int weight, int enginePower) {
-        this.enginePower = enginePower;
         return 5.825 * Math.pow(weight/enginePower, 0.3333333);
     }
 }
